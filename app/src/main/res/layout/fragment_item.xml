@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewBotas"
         android:layout_width="150dp"
         android:layout_height="122dp"
         android:layout_marginStart="16dp"
@@ -26,11 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
-        android:text="TextView"
+        android:text="Nike Air"
         android:textColor="#080808"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBotas" />
 
     <TextView
         android:id="@+id/textViewDollar"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
 
     <TextView
-        android:id="@+id/textViewLabel"
+        android:id="@+id/textViewManufacturer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewDollar" />
 
     <TextView
-        android:id="@+id/textViewNumber"
+        android:id="@+id/textViewAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -82,7 +82,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
 
     <TextView
         android:id="@+id/textViewNumber2"
@@ -93,8 +93,8 @@
         android:text="шт"
         android:textColor="#ADAEAE"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textViewNumber"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLabel" />
+        app:layout_constraintStart_toEndOf="@+id/textViewAmount"
+        app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
 
     <ImageView
         android:id="@+id/imageView2"
