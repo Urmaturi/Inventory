@@ -3,8 +3,8 @@ package com.example.inventory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_inventory.*
 
 class MainActivity : AppCompatActivity() {
 
