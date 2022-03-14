@@ -21,12 +21,12 @@ class InventoryFragment : Fragment() {
 
 
 
-            recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
-            adapter = ItemAdapter(applicationContext)
-            recyclerView.adapter = adapter
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
-            adapter.setDataList(dataList)
+//            recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
+//            adapter = ItemAdapter(applicationContext)
+//            recyclerView.adapter = adapter
+//            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
+//            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
+//            adapter.setDataList(dataList)
         }
     }
 
