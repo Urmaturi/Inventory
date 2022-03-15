@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.fragment_inventory.*
+import kotlinx.android.synthetic.main.fragment_inventory_archive.*
 
 class InventoryFragment : Fragment() {
 
@@ -17,12 +18,7 @@ class InventoryFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-//            recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
-//            adapter = ItemAdapter(applicationContext)
-//            recyclerView.adapter = adapter
-//            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
-//            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
-//            adapter.setDataList(dataList)
+
         }
     }
 
@@ -37,6 +33,7 @@ class InventoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerViewHome.layoutManager = GridLayoutManager(view.context, 2)
+
         adapter = ItemAdapter(view.context)
         recyclerViewHome.adapter = adapter
         dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))

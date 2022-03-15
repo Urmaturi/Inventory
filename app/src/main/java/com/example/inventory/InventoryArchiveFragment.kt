@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_inventory.*
 import kotlinx.android.synthetic.main.fragment_inventory_archive.*
@@ -13,9 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 class InventoryArchiveFragment : Fragment() {
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
-
+    private lateinit var adapter: ItemAdapter
+    private var dataList = mutableListOf<DataModel>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,9 +42,10 @@ class InventoryArchiveFragment : Fragment() {
         recyclerViewArchive.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
-            layoutManager = RecyclerView (activity)
+            layoutManager = LinearLayoutManager (activity)
             // set the custom adapter to the RecyclerView
             adapter = RecyclerAdapter()
+
         }
 
     }

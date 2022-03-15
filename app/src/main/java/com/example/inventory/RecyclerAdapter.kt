@@ -10,7 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    var dataList = emptyList<DataModel>()
+//    var dataList = emptyList<DataModel>()
+//
+//    internal fun setDataList(dataList: List<DataModel>) {
+//        this.dataList = dataList
+//    }
+    private var dataList = mutableListOf<DataModel>()
 
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -21,12 +26,25 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         var textViewManufacturer: TextView
         var textViewAmount: TextView
 
+
+
+
         init {
             imageBotas = itemView.findViewById(R.id.imageViewBotas)
             textViewModelName = itemView.findViewById(R.id.textViewModel)
             textViewCost = itemView.findViewById(R.id.textViewCost)
             textViewManufacturer = itemView.findViewById(R.id.textViewManufacturer)
             textViewAmount = itemView.findViewById(R.id.textViewAmount)
+
+
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
+            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
 
 
             itemView.setOnClickListener {
@@ -39,7 +57,6 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 //            putExtra("CONTENT", itemIsi.text)
             }
 //        context.startActivity(intent)
-
 
         }
     }
@@ -54,7 +71,6 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // Get the data model based on position
         var data = dataList[position]
-
         // Set item views based on your views and data model
         holder.imageBotas.setImageResource(data.img)
         holder.textViewAmount.text = data.amount.toString()

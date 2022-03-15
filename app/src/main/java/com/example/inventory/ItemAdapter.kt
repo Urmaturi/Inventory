@@ -28,7 +28,6 @@ class ItemAdapter(var context: Context) : RecyclerView.Adapter<ItemAdapter.ViewH
         var textViewManufacturer: TextView
         var textViewAmount: TextView
 
-
         init {
             imageBotas = itemView.findViewById(R.id.imageViewBotas)
             textViewModelName = itemView.findViewById(R.id.textViewModel)
@@ -60,7 +59,6 @@ class ItemAdapter(var context: Context) : RecyclerView.Adapter<ItemAdapter.ViewH
         holder.textViewCost.text = data.cost.toString()
         holder.textViewManufacturer.text = data.manufacturer
         holder.textViewModelName.text = data.modelName
-
     }
 
     //  total count of items in the list
