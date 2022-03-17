@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
+import kotlinx.android.synthetic.main.fragment_add_new_model.view.*
 import kotlinx.android.synthetic.main.fragment_inventory.*
+import kotlinx.android.synthetic.main.fragment_inventory.view.*
 import kotlinx.android.synthetic.main.fragment_inventory_archive.*
 
 class InventoryFragment : Fragment() {
@@ -26,6 +29,12 @@ class InventoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        val navController = NavHostFragment.findNavController(this)
+//        val fragmentLayout = inflater.inflate(R.layout.fragment_inventory,container,false)
+//
+//        fragmentLayout.imageViewAddNewModel.setOnClickListener{navController.navigate(R.id.navi_add_model)}
+//
+//        return fragmentLayout
         return inflater.inflate(R.layout.fragment_inventory, container, false)
     }
 
