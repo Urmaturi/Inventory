@@ -10,18 +10,33 @@
         android:id="@+id/navi_add_model"
         android:name="com.example.inventory.AddNewModelFragment"
         android:label="fragment_new_oop"
-        tools:layout="@layout/fragment_add_new_model" />
+        tools:layout="@layout/fragment_add_new_model" >
+        <action
+            android:id="@+id/action_navi_add_model_to_navi_inventory_main"
+            app:destination="@id/navi_inventory_main" />
+    </fragment>
 
     <fragment
         android:id="@+id/navi_inventory_main"
         android:name="com.example.inventory.InventoryFragment"
         android:label="fragment_new_oop"
-        tools:layout="@layout/fragment_inventory" />
+        tools:layout="@layout/fragment_inventory" >
+        <action
+            android:id="@+id/action_navi_inventory_main_to_navi_add_model"
+            app:destination="@id/navi_add_model" />
+        <action
+            android:id="@+id/action_navi_inventory_main_to_navi_inventoy_arhive"
+            app:destination="@id/navi_inventoy_arhive" />
+    </fragment>
 
     <fragment
         android:id="@+id/navi_inventoy_arhive"
         android:name="com.example.inventory.InventoryArchiveFragment"
         android:label="fragment_new_archive"
-        tools:layout="@layout/fragment_inventory_archive" />
+        tools:layout="@layout/fragment_inventory_archive" >
+        <action
+            android:id="@+id/action_navi_inventoy_arhive_to_navi_inventory_main"
+            app:destination="@id/navi_inventory_main" />
+    </fragment>
 
 </navigation>

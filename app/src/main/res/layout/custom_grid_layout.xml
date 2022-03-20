@@ -15,7 +15,9 @@
     app:ignore="NamespaceTypo"
     card_view:cardBackgroundColor="#FFFF"
     card_view:cardCornerRadius="8dp"
-    card_view:contentPadding="10dp">
+    card_view:contentPadding="10dp"
+    android:elevation="5dp">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,102 +25,115 @@
 
         <ImageView
             android:id="@+id/imageViewBotas"
-            tools:srcCompat="@drawable/shoesimg"
             android:layout_width="150dp"
             android:layout_height="122dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="44dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:srcCompat="@drawable/image1" />
 
         <TextView
             android:id="@+id/textViewModel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="Nike Air"
             android:textColor="#080808"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewBotas" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewBotas"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/imageViewBotas" />
 
         <TextView
             android:id="@+id/textViewDollar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="$"
             android:textColor="#75B4FE"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewModel"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/textViewModel" />
 
         <TextView
             android:id="@+id/textViewCost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
             android:text="1500.00"
             android:textColor="#75B4FE"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/textViewDollar"
-            app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewModel"
+            card_view:layout_constraintStart_toEndOf="@+id/textViewDollar"
+            card_view:layout_constraintTop_toTopOf="@+id/textViewDollar" />
 
         <TextView
             android:id="@+id/textViewManufacturer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:text="Nike"
             android:textColor="#ADAEAE"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDollar" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewDollar"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/textViewDollar" />
 
         <TextView
             android:id="@+id/textViewAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:text="105"
             android:textColor="#ADAEAE"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
 
         <TextView
             android:id="@+id/textViewNumber2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="4dp"
             android:text="шт"
             android:textColor="#ADAEAE"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/textViewAmount"
-            app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer"
+            card_view:layout_constraintStart_toEndOf="@+id/textViewAmount"
+            card_view:layout_constraintTop_toTopOf="@+id/textViewAmount" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/ic_baseline_more_vert_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

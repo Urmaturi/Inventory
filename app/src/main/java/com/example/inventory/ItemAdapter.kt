@@ -20,6 +20,7 @@ class ItemAdapter(var context: Context) : RecyclerView.Adapter<ItemAdapter.ViewH
 
     // Provide a direct reference to each of the views with data items
 
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var imageBotas: ImageView
@@ -45,6 +46,8 @@ class ItemAdapter(var context: Context) : RecyclerView.Adapter<ItemAdapter.ViewH
         var view =
             LayoutInflater.from(parent.context).inflate(R.layout.fragment_item, parent, false)
         return ViewHolder(view)
+
+
     }
 
     // Involves populating data into the item through holder

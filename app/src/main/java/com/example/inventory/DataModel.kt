@@ -7,9 +7,6 @@ data class DataModel (
     var manufacturer: String,
     var amount: Int,
     var img: Int
-
-
-
         )
 
 

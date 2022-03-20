@@ -1,65 +1,17 @@
 package com.example.inventory
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.inventory.database.Goods
+import kotlinx.android.synthetic.main.custom_grid_layout.view.*
 
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-//    var dataList = emptyList<DataModel>()
-//
-//    internal fun setDataList(dataList: List<DataModel>) {
-//        this.dataList = dataList
-//    }
-    private var dataList = mutableListOf<DataModel>()
-
-
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        var imageBotas: ImageView
-        var textViewModelName: TextView
-        var textViewCost: TextView
-        var textViewManufacturer: TextView
-        var textViewAmount: TextView
-
-
-
-
-        init {
-            imageBotas = itemView.findViewById(R.id.imageViewBotas)
-            textViewModelName = itemView.findViewById(R.id.textViewModel)
-            textViewCost = itemView.findViewById(R.id.textViewCost)
-            textViewManufacturer = itemView.findViewById(R.id.textViewManufacturer)
-            textViewAmount = itemView.findViewById(R.id.textViewAmount)
-
-
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image1))
-            dataList.add(DataModel("Shinamo 6000", 200, "Nike", 50, R.drawable.image2))
-
-
-            itemView.setOnClickListener {
-//        var position: Int = getAdapterPosition()
-//        val context = itemView.context
-//        val intent = Intent(context, DetailPertanyaan::class.java).apply {
-//            putExtra("NUMBER", position)
-//            putExtra("CODE", itemKode.text)
-//            putExtra("CATEGORY", itemKategori.text)
-//            putExtra("CONTENT", itemIsi.text)
-            }
-//        context.startActivity(intent)
-
-        }
-    }
+    var list = emptyList<Goods>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -68,17 +20,27 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        // Get the data model based on position
-        var data = dataList[position]
-        // Set item views based on your views and data model
-        holder.imageBotas.setImageResource(data.img)
-        holder.textViewAmount.text = data.amount.toString()
-        holder.textViewCost.text = data.cost.toString()
-        holder.textViewManufacturer.text = data.manufacturer
-        holder.textViewModelName.text = data.modelName
+    @SuppressLint("NotifyDataSetChanged")
+    fun setListData(liste: List<Goods>)
+    {
+        list = liste
+        notifyDataSetChanged()
     }
 
-    override fun getItemCount(): Int = dataList.size
+
+     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        // Get the data model based on position
+        var dataTemp = list[position]
+        holder.itemView.textViewModel.text = dataTemp.goodName
+        holder.itemView.textViewCost.text = dataTemp.goodCost.toString()
+        holder.itemView.textViewAmount.text = dataTemp.amountOfGoods.toString()
+        holder.itemView.textViewManufacturer.text = dataTemp.goodsManufacturer
+        holder.itemView.imageViewBotas.setImageResource(R.drawable.image1)
+
+    }
+
+    override fun getItemCount(): Int = list.size
 
 }
