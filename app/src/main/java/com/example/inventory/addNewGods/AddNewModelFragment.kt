@@ -65,6 +65,7 @@ class AddNewModelFragment : Fragment() {
 
                     viewModel.insert(
                         Goods(
+                            goodId=0,
                             goodName = name,
                             goodsManufacturer = manufacturer,
                             goodCost = cost,
@@ -79,8 +80,6 @@ class AddNewModelFragment : Fragment() {
                 } catch (e: Exception) {
                     Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show()
                 }
-
-
             }
 
             binding.imageViewGoBack.setOnClickListener {
@@ -88,7 +87,6 @@ class AddNewModelFragment : Fragment() {
                 navController.navigate(R.id.action_navi_add_model_to_navi_inventory_main)
             }
         }
-
     }
 
     override fun onCreateView(

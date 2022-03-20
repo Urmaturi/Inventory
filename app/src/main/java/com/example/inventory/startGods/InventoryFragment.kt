@@ -9,19 +9,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.inventory.APP
-import com.example.inventory.DataModel
+import com.example.inventory.ItemAdapter
 import com.example.inventory.R
 import com.example.inventory.RecyclerAdapter
 import com.example.inventory.databinding.FragmentInventoryBinding
 
 class InventoryFragment : Fragment() {
 
-
-    private var dataList = mutableListOf<DataModel>()
-
-    lateinit var binding: FragmentInventoryBinding
+     lateinit var binding: FragmentInventoryBinding
     lateinit var recyclerView: RecyclerView
-    lateinit var adapter: RecyclerAdapter
+    lateinit var adapter: ItemAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,10 +52,10 @@ class InventoryFragment : Fragment() {
         val viewModel = ViewModelProvider(this).get(FragmentInventoryViewModel::class.java)
         viewModel.initDataBase()
         recyclerView = binding.recyclerViewHome
-        adapter = RecyclerAdapter()
+        adapter = ItemAdapter()
         recyclerView.adapter = adapter
-        viewModel.getAllGoods().observe(viewLifecycleOwner, { dataList ->
-            adapter.setListData(dataList.asReversed())
+        viewModel.getAllGoods().observe(this, { dataList ->
+            adapter.setListData(dataList)
         })
     }
 }

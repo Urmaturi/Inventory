@@ -12,6 +12,7 @@ abstract class InventoryDataBase : RoomDatabase() {
     abstract fun getGoodsDao(): GoodsDataBaseDao
 
     companion object {
+
         private var database: InventoryDataBase? = null
 
 

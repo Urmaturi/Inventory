@@ -24,7 +24,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageViewBotas"
+            android:id="@+id/imageViewBotas2"
             android:layout_width="150dp"
             android:layout_height="122dp"
             android:layout_marginTop="44dp"
@@ -39,7 +39,7 @@
             tools:srcCompat="@drawable/image1" />
 
         <TextView
-            android:id="@+id/textViewModel"
+            android:id="@+id/textViewModel2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -50,10 +50,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewBotas"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/imageViewBotas" />
+            card_view:layout_constraintTop_toBottomOf="@+id/imageViewBotas2" />
 
         <TextView
-            android:id="@+id/textViewDollar"
+            android:id="@+id/textViewDollar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -65,10 +65,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewModel"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/textViewModel" />
+            card_view:layout_constraintTop_toBottomOf="@+id/textViewModel2" />
 
         <TextView
-            android:id="@+id/textViewCost"
+            android:id="@+id/textViewCost2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -78,11 +78,11 @@
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/textViewDollar"
             app:layout_constraintTop_toBottomOf="@+id/textViewModel"
-            card_view:layout_constraintStart_toEndOf="@+id/textViewDollar"
-            card_view:layout_constraintTop_toTopOf="@+id/textViewDollar" />
+            card_view:layout_constraintStart_toEndOf="@+id/textViewDollar2"
+            card_view:layout_constraintTop_toTopOf="@+id/textViewDollar2" />
 
         <TextView
-            android:id="@+id/textViewManufacturer"
+            android:id="@+id/textViewManufacturer2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -93,10 +93,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewDollar"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/textViewDollar" />
+            card_view:layout_constraintTop_toBottomOf="@+id/textViewDollar2" />
 
         <TextView
-            android:id="@+id/textViewAmount"
+            android:id="@+id/textViewAmount2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -108,7 +108,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
+            card_view:layout_constraintTop_toBottomOf="@+id/textViewManufacturer2" />
 
         <TextView
             android:id="@+id/textViewNumber2"
@@ -120,8 +120,8 @@
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/textViewAmount"
             app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer"
-            card_view:layout_constraintStart_toEndOf="@+id/textViewAmount"
-            card_view:layout_constraintTop_toTopOf="@+id/textViewAmount" />
+            card_view:layout_constraintStart_toEndOf="@+id/textViewAmount2"
+            card_view:layout_constraintTop_toTopOf="@+id/textViewAmount2" />
 
         <ImageView
             android:id="@+id/imageView2"

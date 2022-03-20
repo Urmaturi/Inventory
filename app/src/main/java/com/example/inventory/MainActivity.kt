@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    private lateinit var adapter: ItemAdapter
-    private var dataList = mutableListOf<DataModel>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

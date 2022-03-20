@@ -1,69 +1,55 @@
 package com.example.inventory
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import com.example.inventory.database.Goods
+import kotlinx.android.synthetic.main.custom_grid_layout.view.*
+import kotlinx.android.synthetic.main.custom_grid_layout.view.imageViewBotas2
+import kotlinx.android.synthetic.main.custom_grid_layout.view.textViewAmount2
+import kotlinx.android.synthetic.main.custom_grid_layout.view.textViewCost2
+import kotlinx.android.synthetic.main.custom_grid_layout.view.textViewManufacturer2
+import kotlinx.android.synthetic.main.custom_grid_layout.view.textViewModel2
+import kotlinx.android.synthetic.main.fragment_item.view.*
 
 
+class ItemAdapter  : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
-class ItemAdapter(var context: Context) : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
+    var dataList = emptyList<Goods>()
 
-    var dataList = emptyList<DataModel>()
-
-    internal fun setDataList(dataList: List<DataModel>) {
-        this.dataList = dataList
+    @SuppressLint("NotifyDataSetChanged")
+    fun setListData(liste: List<Goods>)
+    {
+        dataList = liste
+        notifyDataSetChanged()
     }
 
-    // Provide a direct reference to each of the views with data items
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        var imageBotas: ImageView
-        var textViewModelName: TextView
-        var textViewCost: TextView
-        var textViewManufacturer: TextView
-        var textViewAmount: TextView
-
-        init {
-            imageBotas = itemView.findViewById(R.id.imageViewBotas)
-            textViewModelName = itemView.findViewById(R.id.textViewModel)
-            textViewCost = itemView.findViewById(R.id.textViewCost)
-            textViewManufacturer = itemView.findViewById(R.id.textViewManufacturer)
-            textViewAmount = itemView.findViewById(R.id.textViewAmount)
-        }
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val v = LayoutInflater.from(parent.context)
+            .inflate(R.layout.fragment_item, parent, false)
+        return ViewHolder(v)
     }
 
-    // Usually involves inflating a layout from XML and returning the holder
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemAdapter.ViewHolder {
-
-        // Inflate the custom layout
-        var view =
-            LayoutInflater.from(parent.context).inflate(R.layout.fragment_item, parent, false)
-        return ViewHolder(view)
 
 
-    }
-
-    // Involves populating data into the item through holder
     override fun onBindViewHolder(holder: ItemAdapter.ViewHolder, position: Int) {
 
-        // Get the data model based on position
         var data = dataList[position]
+        holder.itemView.imageViewBotas2.setImageResource(R.drawable.image1)
+        holder.itemView.textViewModel2.text = data.goodName
+        holder.itemView.textViewCost2.text = data.goodCost.toString()
+        holder.itemView.textViewManufacturer2.text = data.goodsManufacturer
+        holder.itemView.textViewAmount2
 
-        // Set item views based on your views and data model
-        holder.imageBotas.setImageResource(data.img)
-        holder.textViewAmount.text = data.amount.toString()
-        holder.textViewCost.text = data.cost.toString()
-        holder.textViewManufacturer.text = data.manufacturer
-        holder.textViewModelName.text = data.modelName
     }
 
-    //  total count of items in the list
+
     override fun getItemCount() = dataList.size
 }

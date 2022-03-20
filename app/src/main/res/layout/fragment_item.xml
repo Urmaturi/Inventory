@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageViewBotas"
+        android:id="@+id/imageViewBotas2"
         android:layout_width="150dp"
         android:layout_height="122dp"
         android:layout_marginStart="16dp"
@@ -21,7 +21,7 @@
         tools:srcCompat="@drawable/shoesimg" />
 
     <TextView
-        android:id="@+id/textViewModel"
+        android:id="@+id/textViewModel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -30,10 +30,10 @@
         android:textColor="#080808"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewBotas" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBotas2" />
 
     <TextView
-        android:id="@+id/textViewDollar"
+        android:id="@+id/textViewDollar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -43,10 +43,10 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewModel2" />
 
     <TextView
-        android:id="@+id/textViewCost"
+        android:id="@+id/textViewCost2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -55,11 +55,11 @@
         android:textColor="#75B4FE"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textViewDollar"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
+        app:layout_constraintStart_toEndOf="@+id/textViewDollar2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewModel2" />
 
     <TextView
-        android:id="@+id/textViewManufacturer"
+        android:id="@+id/textViewManufacturer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -68,10 +68,10 @@
         android:textColor="#ADAEAE"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDollar" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDollar2" />
 
     <TextView
-        android:id="@+id/textViewAmount"
+        android:id="@+id/textViewAmount2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -82,7 +82,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer2" />
 
     <TextView
         android:id="@+id/textViewNumber2"
@@ -93,8 +93,8 @@
         android:text="шт"
         android:textColor="#ADAEAE"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textViewAmount"
-        app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer" />
+        app:layout_constraintStart_toEndOf="@+id/textViewAmount2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer2" />
 
     <ImageView
         android:id="@+id/imageView2"
