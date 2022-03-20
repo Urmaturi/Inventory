@@ -7,8 +7,9 @@ import androidx.room.RoomDatabase
 
 
 @Database(entities = [Goods::class], version = 1, exportSchema = false)
+
 abstract class InventoryDataBase : RoomDatabase() {
-    abstract fun goodsDao(): GoodsDataBaseDao
+    abstract fun getGoodsDao(): GoodsDataBaseDao
 
     companion object {
         private var database: InventoryDataBase? = null

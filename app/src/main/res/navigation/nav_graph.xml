@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/navi_add_model"
-        android:name="com.example.inventory.AddNewModelFragment"
+        android:name="com.example.inventory.addNewGods.AddNewModelFragment"
         android:label="fragment_new_oop"
         tools:layout="@layout/fragment_add_new_model" >
         <action
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/navi_inventory_main"
-        android:name="com.example.inventory.InventoryFragment"
+        android:name="com.example.inventory.startGods.InventoryFragment"
         android:label="fragment_new_oop"
         tools:layout="@layout/fragment_inventory" >
         <action
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/navi_inventoy_arhive"
-        android:name="com.example.inventory.InventoryArchiveFragment"
+        android:name="com.example.inventory.ArchiveGoods.InventoryArchiveFragment"
         android:label="fragment_new_archive"
         tools:layout="@layout/fragment_inventory_archive" >
         <action
