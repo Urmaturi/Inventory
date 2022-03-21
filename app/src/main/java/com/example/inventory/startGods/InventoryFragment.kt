@@ -21,6 +21,7 @@ class InventoryFragment : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: ItemAdapter
 
+    private lateinit var mUserViewModel: ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,13 +36,34 @@ class InventoryFragment : Fragment() {
     ): View? {
 
         binding = FragmentInventoryBinding.inflate(inflater, container, false)
+
+        //init()
         return binding.root
     }
+
+    fun fillRecicleView
+    {
+        val adapter = ListAdapter()
+        val recyclerView = view.recyclerview
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        // UserViewModel
+        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
+            adapter.setData(user)
+        })
+    }
+
+
+
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
-              init()
+
 
         binding.btnAddNewGoods.setOnClickListener {
             val navController = APP.findNavController(R.id.nav_host_fragment)
@@ -49,17 +71,15 @@ class InventoryFragment : Fragment() {
         }
     }
 
-    private fun init() {
-
-
-//        recyclerView.layoutManager =LinearLayoutManager(requireContext())
-        recyclerView = binding.recyclerViewHome
-        adapter = ItemAdapter()
-        recyclerView.adapter = adapter
-        val viewModel = ViewModelProvider(this).get(FragmentInventoryViewModel::class.java)
-        viewModel.initDataBase()
-        viewModel.getAllGoods().observe(this, { dataList ->
-            adapter.setListData(dataList)
-        })
-    }
+//    private fun init() {
+//        val viewModel = ViewModelProvider(this).get(FragmentInventoryViewModel::class.java)
+//        viewModel.initDataBase()
+//        recyclerView = binding.recyclerViewHome
+////        recyclerView.layoutManager =LinearLayoutManager(requireContext())
+//        adapter = ItemAdapter()
+//        recyclerView.adapter = adapter
+//        viewModel.getAllGoods().observe(this, { dataList ->
+//            adapter.setListData(dataList)
+//        })
+//    }
 }
