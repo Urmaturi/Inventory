@@ -46,7 +46,8 @@ class ItemAdapter  : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
         holder.itemView.textViewModel2.text = data.goodName
         holder.itemView.textViewCost2.text = data.goodCost.toString()
         holder.itemView.textViewManufacturer2.text = data.goodsManufacturer
-        holder.itemView.textViewAmount2
+        holder.itemView.textViewAmount2.text = data.amountOfGoods.toString()
+
 
     }
 

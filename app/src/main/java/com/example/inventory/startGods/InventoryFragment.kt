@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.inventory.APP
 import com.example.inventory.ItemAdapter
@@ -49,11 +50,14 @@ class InventoryFragment : Fragment() {
     }
 
     private fun init() {
-        val viewModel = ViewModelProvider(this).get(FragmentInventoryViewModel::class.java)
-        viewModel.initDataBase()
+
+
+//        recyclerView.layoutManager =LinearLayoutManager(requireContext())
         recyclerView = binding.recyclerViewHome
         adapter = ItemAdapter()
         recyclerView.adapter = adapter
+        val viewModel = ViewModelProvider(this).get(FragmentInventoryViewModel::class.java)
+        viewModel.initDataBase()
         viewModel.getAllGoods().observe(this, { dataList ->
             adapter.setListData(dataList)
         })

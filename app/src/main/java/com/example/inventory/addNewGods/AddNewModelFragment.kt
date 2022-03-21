@@ -35,25 +35,6 @@ class AddNewModelFragment : Fragment() {
     private fun init() {
         binding.buttonAdd.setOnClickListener {
 
-//            val name = binding.editTextName.text.toString()
-//            val cost: Int = binding.editTextProductCost.text.toString().toInt()
-//            val manufacturer = binding.editTextManufacturer.text.toString()
-//            val number: Int = binding.editTextNumber.text.toString().toInt()
-//            val archive = false
-//
-//
-//            database.insert(   Goods(
-//                        goodName = name,
-//                        goodsManufacturer = manufacturer,
-//                        goodCost = cost,
-//                        amountOfGoods = number,
-//                        archiveOfGoods = archive
-//                    ))
-//
-//
-//        }
-
-
             val viewModel = ViewModelProvider(this).get(AddNewGoodsViewModel::class.java)
             binding.buttonAdd.setOnClickListener {
                 try {
@@ -62,8 +43,7 @@ class AddNewModelFragment : Fragment() {
                     val manufacturer = binding.editTextManufacturer.text.toString()
                     val number: Int = binding.editTextNumber.text.toString().toInt()
                     val archive = false
-//                    val good = Goods(0, name, cost, manufacturer, number, archive)
-                    val good = Goods(0, "name", 1500, "reebok", 50, false)
+                    val good = Goods(0, name, cost, manufacturer, number, archive)
                     viewModel.insert(good) { }
 
                     val navController = APP.findNavController(R.id.nav_host_fragment)
