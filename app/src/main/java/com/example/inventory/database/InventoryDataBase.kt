@@ -19,7 +19,7 @@ abstract class InventoryDataBase : RoomDatabase() {
         @Synchronized
         fun getInstance(context: Context): InventoryDataBase {
             return if (database == null) {
-                database = Room.databaseBuilder(context,InventoryDataBase::class.java,"db").build()
+                database = Room.databaseBuilder(context,InventoryDataBase::class.java,"db1").build()
                 database as InventoryDataBase
             } else {
                 database as InventoryDataBase

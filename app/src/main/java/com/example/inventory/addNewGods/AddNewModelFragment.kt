@@ -62,17 +62,10 @@ class AddNewModelFragment : Fragment() {
                     val manufacturer = binding.editTextManufacturer.text.toString()
                     val number: Int = binding.editTextNumber.text.toString().toInt()
                     val archive = false
+//                    val good = Goods(0, name, cost, manufacturer, number, archive)
+                    val good = Goods(0, "name", 1500, "reebok", 50, false)
+                    viewModel.insert(good) { }
 
-                    viewModel.insert(
-                        Goods(
-                            goodId=0,
-                            goodName = name,
-                            goodsManufacturer = manufacturer,
-                            goodCost = cost,
-                            amountOfGoods = number,
-                            archiveOfGoods = archive
-                        )
-                    ) { }
                     val navController = APP.findNavController(R.id.nav_host_fragment)
                     navController.navigate(R.id.action_navi_add_model_to_navi_inventory_main)
                     Toast.makeText(context, "добавлено!", Toast.LENGTH_SHORT).show()

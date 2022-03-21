@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity (tableName = "goods_in_the_store_table")
 data class Goods(
-    @PrimaryKey(autoGenerate = true) var goodId: Int = 0,
+    @PrimaryKey(autoGenerate = true) var goodId: Int ,
     @ColumnInfo(name = "good_name") var goodName: String,
     @ColumnInfo(name = "good_cost") var goodCost: Int,
     @ColumnInfo(name = "goods_manufacturer") var goodsManufacturer: String,
